@@ -12,6 +12,19 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"></application>
+        android:theme="@style/AppTheme">
+
+        <!--android:screenOrientation="portrait" acticity显示方向 portrait纵向 landscape横向-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <!--第一启动Activity-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
 
 </manifest>
