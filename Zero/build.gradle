@@ -46,5 +46,5 @@ dependencies {
 
     compile 'com.android.support:multidex:1.0.0'//分包支持
 
-    compile project(path: ':acommon')
+    compile project(path: ':acommon')//引入公共库
 }

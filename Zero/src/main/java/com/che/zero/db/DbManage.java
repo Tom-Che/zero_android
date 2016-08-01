@@ -90,8 +90,8 @@ public class DbManage {
         if (t == null) {
             return 0;
         }
-        entity.setCreateDate(DateUtil.getNowTime());
-        entity.setModifyDate(DateUtil.getNowTime());
+        entity.setCreateDate(DateUtil.getNowDateTime());
+        entity.setModifyDate(DateUtil.getNowDateTime());
 
         ContentValues cv = new ContentValues();
         BeanInfo info = BeanManage.self().getBeanInfo(clazz);
@@ -143,7 +143,7 @@ public class DbManage {
         if (t == null) {
             return false;
         }
-        entity.setModifyDate(DateUtil.getNowTime());
+        entity.setModifyDate(DateUtil.getNowDateTime());
         ContentValues cv = new ContentValues();
         BeanInfo info = BeanManage.self().getBeanInfo(clazz);
         PropertyInfo[] pis = info.getPropertyInfos();
