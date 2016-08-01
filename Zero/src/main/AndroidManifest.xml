@@ -1,13 +1,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.che.zero">
 
+    <!--android:name=".common.ApplicationEx" 指定app启动时创建的Appliction类
+        android:allowBackup="true" 允许ADB备份数据
+        android:supportsRtl="true" 支持从右到左的布局。targetSdkVersion>=17
+        如果当前系统语言是阿拉伯语/波斯语，打开了这个功能的应用的布局就会自动变成从右往左
+    -->
     <application
+        android:name=".common.ApplicationEx"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-
-    </application>
+        android:theme="@style/AppTheme"></application>
 
 </manifest>
