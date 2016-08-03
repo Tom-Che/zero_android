@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 
+import com.che.acommon.guava.Strings;
+import com.che.acommon.util.AppUtil;
 import com.che.zero.activity.WelcomeActivity;
 import com.che.zero.db.DbManage;
 import com.che.zero.db.ZeroDbAdapter;
@@ -46,9 +48,12 @@ public class ApplicationEx extends Application {
     public void onCreate() {
         super.onCreate();
 
+        String pname = AppUtil.getProcessName(getApplicationContext());//获取当前进程名
+        if (Strings.isNullOrEmpty(pname) || pname.lastIndexOf("baidu") > 0) {
+            return;
+        }
         Log.e(TAG, "----------------ApplicationEx Init Start------------------");
 
-        //
         ClientConstant.PATH_DB_NAME = getExternalCacheDir().getPath() + "/db";//本地数据库
         ClientConstant.PATH_IMAGE_TEMP = getExternalCacheDir().getPath() + "/imageTemp/";//图片缓存
         ClientConstant.PATH_FILE_TEMP_HEAD = getExternalCacheDir().getPath() + "/head.temp";//头像缓存
