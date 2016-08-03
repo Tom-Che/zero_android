@@ -108,6 +108,7 @@ public class SharedPreferencesUtil {
      */
     public static int getSharedPreInteger(Context context, String key, int defaultValue) {
         sharedPreferences = context.getSharedPreferences(XML_Settings, Context.MODE_PRIVATE);
+
         return sharedPreferences.getInt(key, defaultValue);
     }
 
