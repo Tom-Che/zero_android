@@ -1,6 +1,6 @@
 package com.che.acommon.bean;
 
-import com.che.acommon.util.StingUtil;
+import com.che.acommon.util.StringUtil;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -27,7 +27,7 @@ public class PropertyInfo {
         Method[] methods = BeanInfo.declaredMethodCache.get(clazz);
         Class<?> type = field.getType();
         name = field.getName();
-        String fileName = StingUtil.convertFristToUpperCase(name);
+        String fileName = StringUtil.convertFristToUpperCase(name);
         String readMethodName;
         if (type == Boolean.class || type == boolean.class || type == null) {
             readMethodName = PropertyInfo.IS + fileName;

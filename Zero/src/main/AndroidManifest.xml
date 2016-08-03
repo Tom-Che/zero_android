@@ -11,8 +11,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:persistent="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
 
         <!--android:screenOrientation="portrait" acticity显示方向 portrait纵向 landscape横向-->
         <activity
